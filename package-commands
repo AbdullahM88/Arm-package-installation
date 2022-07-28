@@ -1,0 +1,15 @@
+to install the package you first need to install the Catkin library, follow this command  >> sudo apt-get install ros-noetic-catkin
+now after you have been installed catkin, you need to create a new directory >> mkdir -p ~/catkin_ws/src
+move to the new directory >> cd ~/catkin_ws/
+to install the arm-package use the following command >> catkin_make # it may take few time 
+move to source folder >> cd ~/catkin_ws/src
+use the followin command to move to the arm-package in Github >> git clone https://github.com/smart-methods/arduino_robot_arm.git 
+go back to catkin folder >> cd ~/catkin_ws
+now you need to install some package. run the following command >> rosdep install --from-paths src --ignore-src -r -y >> sudo apt-get install ros-kinetic-moveit
+>> sudo apt-get install ros-kinetic-joint-state-publisher ros-kinetic-joint-state-publisher-gui >> sudo apt-get install ros-kinetic-gazebo-ros-control joint-state-publisher
+>> sudo apt-get install ros-kinetic-ros-controllers ros-kinetic-ros-control
+now go to the bash folder >> sudo nano ~/.bashrc
+after you wrote the previous command, the bash file will appear, move to the last line and paste the following command >> source /home/wesam/catkin_ws/devel/setup.bash
+*Note you have to be ensure that you pasted the right path for the bash file.
+update the soures of the bashrc file >> source ~/.bashrc
+finally, write the following command to launch the robot arm package >> roslaunch robot_arm_pkg check_motors.launch
