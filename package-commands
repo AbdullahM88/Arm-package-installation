@@ -1,4 +1,4 @@
-to install the package you first need to install the Catkin library, follow this command  >> sudo apt-get install ros-noetic-catkin
+# to install the package you first need to install the Catkin library, follow this command  >> sudo apt-get install ros-noetic-catkin
 now after you have been installed catkin, you need to create a new directory >> mkdir -p ~/catkin_ws/src
 move to the new directory >> cd ~/catkin_ws/
 to install the arm-package use the following command >> catkin_make # it may take few time 
